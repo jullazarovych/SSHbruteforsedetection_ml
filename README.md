@@ -36,9 +36,7 @@ The classifier is trained on features extracted from the logs, such as:
 - Number of failed attempts per IP
 - Time intervals between attempts
 - Unique IP addresses per session
-After training, it can classify each login attempt as either:
-- 0 - Normal
-- 1 - Brute-force attack
+After training, it can classify each login attempt as either (0 - Normal, 1 - Brute-force attack)
 
 ### Function Descriptions
 ```
@@ -69,7 +67,7 @@ Purpose: Adds labels to data (e.g. 0 for normal, 1 for attack) based on rules.
 ```
 train_model(X, y)
 ```
-Purpose: Trains a Random Forest classifier.
+Purpose: Trains a Random Forest classifier. 
 - Output: Trained model and accuracy score.
 
 ```
@@ -77,6 +75,8 @@ evaluate_model(model, X_test, y_test)
 ```
 Purpose: Evaluates the model using accuracy and confusion matrix.
 - Output: Prints evaluation metrics and shows visualization.
-
+  
+```
 plot_feature_importance(model, X)
+```
 Purpose: Visualizes the most important features used by the classifier.
